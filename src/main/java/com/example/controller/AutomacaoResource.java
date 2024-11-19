@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 @Path("/automacao")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class AutomacaoResource {
     private final Automacao automacao = new Automacao();
 
@@ -23,8 +25,6 @@ public class AutomacaoResource {
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response ajustarConsumo(List<Consumo> consumos) {
         for (Consumo consumo : consumos) {
             automacao.ajustarConsumo(consumo); // Executa a lógica para cada dispositivo
@@ -34,15 +34,12 @@ public class AutomacaoResource {
 
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public Response listarDispositivos() {
         return Response.ok(dispositivos.values()).build();
     }
 
     @PUT
     @Path("/{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response atualizarDispositivo(@PathParam("id") int id, Consumo novoConsumo) {
         if (dispositivos.containsKey(id)) {
             dispositivos.put(id, novoConsumo);

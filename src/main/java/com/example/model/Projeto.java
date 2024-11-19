@@ -1,9 +1,13 @@
 package com.example.model;
 
 import com.example.infra.ProjectDAO;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Projeto {
+    private final List<ProjetoSustentavel> projetos = new ArrayList<>();
+    private int contadorId = 1;
     private ProjectDAO dao = new ProjectDAO();
 
     public List<ProjetoSustentavel> listarProjetos() {
@@ -11,12 +15,24 @@ public class Projeto {
     }
 
     public void inserirProjeto(ProjetoSustentavel projeto) {
+        projeto.setId(contadorId++); // Atribui um ID único
+        projetos.add(projeto);
     }
 
-    public void atualizarProjeto(ProjetoSustentavel projeto) {
+    // Atualizar um projeto existente
+    public void atualizarProjeto(ProjetoSustentavel projetoAtualizado) {
+        for (int i = 0; i < projetos.size(); i++) {
+            if (projetos.get(i).getId() == projetoAtualizado.getId()) {
+                projetos.set(i, projetoAtualizado);
+                return;
+            }
+        }
+        throw new IllegalArgumentException("Projeto com ID " + projetoAtualizado.getId() + " não encontrado.");
     }
 
+    // Deletar um projeto por ID
     public void deletarProjeto(int id) {
+        projetos.removeIf(p -> p.getId() == id);
     }
     /*
       Calcula a eficiência energética de um projeto.
