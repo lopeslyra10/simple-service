@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="Primeiro commit">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoResource.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ConnectionFactory.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" afterDir="false" />
@@ -19,52 +12,9 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Automacao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Consumo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/model/ProjetoSustentavel.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/example/ProjetoDAOTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/example/ProjetoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5429044be386aa626e6423772c2a19985ee25f4b7c645fc4c6d4493fa7b796ee.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/Documentação_PortalAutocare_FADIT.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/controller/MecanicoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/controller/MyResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/infra/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/infra/UsuarioDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Cadastro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Chatbot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Contato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/ContratoSeguro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Diagnostico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/HistoricoProblemas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Mecanico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Oficina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Peca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/model/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/service/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java/PortalAutoCare/src/main/java/org/example/service/MecanicoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Front-End Design Engineering/projeto react/project-test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Front-End Design Engineering/projeto react/project-test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python/# Imports.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python/gs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Python/gs2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../GlobalSolutionArquivos/GSFRONT.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../GlobalSolutionArquivos/globalsolutionJava.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,53 +29,84 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/../../.." source="lopeslyra10" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "lopeslyra10"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="da9aa704-8b1d-4850-9e13-c026686ee603" />
+        <option name="url" value="https://github.com/lopeslyra10/simple-service.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2op3Ixf618Cp9GUixPa3wcOWFTO" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in GlobalSolutionJava.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyResourceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyResourceTest.testDeletarProjetosPorTipoFonte.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyResourceTest.testGetIt.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyResourceTest.testListarProjetos.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MyResourceTest.testListarProjetosPorStatus.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProjetoBOTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProjetoDAOTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProjetoDAOTest.testListarProjetos.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProjetoTest.testCalcularEficiênciaEnergetica.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/FIAP/java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "JUnit.All in GlobalSolutionJava.executor": "Run",
+    "JUnit.MyResourceTest.executor": "Run",
+    "JUnit.MyResourceTest.testDeletarProjetosPorTipoFonte.executor": "Run",
+    "JUnit.MyResourceTest.testGetIt.executor": "Run",
+    "JUnit.MyResourceTest.testListarProjetos.executor": "Run",
+    "JUnit.MyResourceTest.testListarProjetosPorStatus.executor": "Run",
+    "JUnit.ProjetoBOTest.executor": "Run",
+    "JUnit.ProjetoDAOTest.executor": "Run",
+    "JUnit.ProjetoDAOTest.testListarProjetos.executor": "Run",
+    "JUnit.ProjetoTest.testCalcularEficiênciaEnergetica.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/workspaces/simple-service",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FIAP\1TDSY\Java\simple-service\target\maven-archiver" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MyResourceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Main" />
       <module name="GlobalSolutionJava" />
@@ -204,8 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MyResourceTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MyResourceTest.testDeletarProjetosPorTipoFonte" />
         <item itemvalue="JUnit.MyResourceTest.testListarProjetosPorStatus" />
         <item itemvalue="JUnit.ProjetoDAOTest.testListarProjetos" />
@@ -229,10 +210,21 @@
       <option name="presentableId" value="Default" />
       <updated>1731552613825</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primeiro commit">
+      <option name="closed" value="true" />
+      <created>1732040168254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732040168254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Primeiro commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primeiro commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
