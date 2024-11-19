@@ -7,11 +7,12 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Path("/automacao")
 public class AutomacaoResource {
-    private Automacao automacaoBO = new Automacao();
+    private final Automacao automacao = new Automacao();
 
     // Simulando dispositivos para testar
     private static Map<Integer, Consumo> dispositivos = new HashMap<>();
@@ -24,10 +25,13 @@ public class AutomacaoResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response ajustarConsumo(Consumo consumo) {
-        String acao = automacaoBO.ajustarConsumo(consumo);
-        return Response.ok(acao).build();
+    public Response ajustarConsumo(List<Consumo> consumos) {
+        for (Consumo consumo : consumos) {
+            automacao.ajustarConsumo(consumo); // Executa a lógica para cada dispositivo
+        }
+        return Response.ok("Dispositivos ajustados com sucesso").build();
     }
+
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

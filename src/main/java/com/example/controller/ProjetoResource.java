@@ -10,12 +10,12 @@ import java.util.List;
 
 @Path("/projetos")
 public class ProjetoResource {
-    private Projeto bo = new Projeto();
+    private final Projeto projeto = new Projeto();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarProjetos() {
-        List<ProjetoSustentavel> projetos = bo.listarProjetos();
+        List<ProjetoSustentavel> projetos = projeto.listarProjetos();
         return Response.ok(projetos).build();
     }
 
@@ -23,7 +23,7 @@ public class ProjetoResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response criarProjeto(ProjetoSustentavel projeto) {
-        bo.inserirProjeto(projeto);
+        this.projeto.inserirProjeto(projeto);
         return Response.status(Response.Status.CREATED).entity(projeto).build();
     }
 
@@ -33,21 +33,21 @@ public class ProjetoResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response atualizarProjeto(@PathParam("id") int id, ProjetoSustentavel projeto) {
         projeto.setId(id);
-        bo.atualizarProjeto(projeto);
+        this.projeto.atualizarProjeto(projeto);
         return Response.ok(projeto).build();
     }
 
     @DELETE
     @Path("/{id}")
     public Response deletarProjeto(@PathParam("id") int id) {
-        bo.deletarProjeto(id);
+        projeto.deletarProjeto(id);
         return Response.noContent().build();
     }
     @GET
     @Path("/status/{status}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarProjetosPorStatus(@PathParam("status") String status) {
-        List<ProjetoSustentavel> projetos = bo.listarProjetos();
+        List<ProjetoSustentavel> projetos = projeto.listarProjetos();
         List<ProjetoSustentavel> filtrados = projetos.stream()
                 .filter(p -> status.equalsIgnoreCase(p.getStatus()))
                 .toList();
@@ -58,7 +58,7 @@ public class ProjetoResource {
     @Path("/tipoFonte/{tipoFonte}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response listarProjetosPorTipoFonte(@PathParam("tipoFonte") String tipoFonte) {
-        List<ProjetoSustentavel> projetos = bo.listarProjetos();
+        List<ProjetoSustentavel> projetos = projeto.listarProjetos();
         List<ProjetoSustentavel> filtrados = projetos.stream()
                 .filter(p -> tipoFonte.equalsIgnoreCase(p.getTipoFonte()))
                 .toList();
@@ -68,10 +68,10 @@ public class ProjetoResource {
     @DELETE
     @Path("/tipoFonte/{tipoFonte}")
     public Response deletarProjetosPorTipoFonte(@PathParam("tipoFonte") String tipoFonte) {
-        List<ProjetoSustentavel> projetos = bo.listarProjetos();
+        List<ProjetoSustentavel> projetos = projeto.listarProjetos();
         projetos.stream()
                 .filter(p -> tipoFonte.equalsIgnoreCase(p.getTipoFonte()))
-                .forEach(p -> bo.deletarProjeto(p.getId()));
+                .forEach(p -> projeto.deletarProjeto(p.getId()));
         return Response.noContent().build();
     }
 

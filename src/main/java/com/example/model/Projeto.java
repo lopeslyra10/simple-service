@@ -1,10 +1,10 @@
 package com.example.model;
 
-import com.example.infra.ProjetoDAO;
+import com.example.infra.ProjectDAO;
 import java.util.List;
 
 public class Projeto {
-    private ProjetoDAO dao = new ProjetoDAO();
+    private ProjectDAO dao = new ProjectDAO();
 
     public List<ProjetoSustentavel> listarProjetos() {
         return dao.listarProjetos();
@@ -18,10 +18,10 @@ public class Projeto {
 
     public void deletarProjeto(int id) {
     }
-    /**
-     * Calcula a eficiência energética de um projeto.
-     * @param projeto ProjetoSustentavel com informações como custo e tipo de fonte.
-     * @return Um valor de eficiência entre 0 e 1, onde valores mais altos representam maior eficiência.
+    /*
+      Calcula a eficiência energética de um projeto.
+     @param projeto ProjetoSustentavel com informações como custo e tipo de fonte.
+      @return Um valor de eficiência entre 0 e 1, onde valores mais altos representam maior eficiência.
      */
     public double calcularEficiênciaEnergetica(ProjetoSustentavel projeto) {
         double eficiencia = 1.0;

@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjetoDAO {
+public class ProjectDAO {
 
     public List<ProjetoSustentavel> listarProjetos() {
         List<ProjetoSustentavel> projetos = new ArrayList<>();

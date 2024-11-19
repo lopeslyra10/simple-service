@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.infra.ProjetoDAO;
+import com.example.infra.ProjectDAO;
 import com.example.model.ProjetoSustentavel;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ProjetoDAOTest {
 
-    private ProjetoDAO projetoDAO = new ProjetoDAO();
+    private ProjectDAO projetoDAO = new ProjectDAO();
 
     @Test
     public void testListarProjetos() {
