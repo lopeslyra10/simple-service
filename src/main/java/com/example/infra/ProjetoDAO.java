@@ -1,16 +1,14 @@
 package com.example.infra;
 
-import com.example.controller.ConnectionFactory;
 import com.example.model.ProjetoSustentavel;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjectDAO {
+public class ProjetoDAO {
+
+    public ProjetoDAO() {
+    }
 
     public List<ProjetoSustentavel> listarProjetos() {
         List<ProjetoSustentavel> projetos = new ArrayList<>();

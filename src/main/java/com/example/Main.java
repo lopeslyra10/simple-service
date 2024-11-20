@@ -36,11 +36,11 @@ public class Main {
 
         projeto.setNome("Projeto Solar");
         projeto.setDescricao("Projeto de energia solar em comunidade.");
-        projeto.setCusto(300000);
+        projeto.setCusto(300000.00);
         projeto.setTipoFonte("Solar");
-        projeto.setEmissoesCarbono(800);
+        projeto.setEmissoesCarbono(800.00);
 
-        double eficiencia = projetoBO.calcularEficiênciaEnergetica(projeto);
+        double eficiencia = projetoBO.calcularEficienciaEnergetica(projeto);
         System.out.println("Eficiência energética: " + eficiencia);
     }
 }

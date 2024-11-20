@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/infra/ConsumoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/infra/ProjetoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/infra/ConnectionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/infra/ProjectDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/ProjetoSustentavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/ProjetoSustentavel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ProjetoDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ProjetoDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/ProjetoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/ProjetoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +51,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "lopeslyra10"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lopeslyra10&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -68,33 +76,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Run",
-    "JUnit.All in GlobalSolutionJava.executor": "Run",
-    "JUnit.MyResourceTest.executor": "Run",
-    "JUnit.MyResourceTest.testDeletarProjetosPorTipoFonte.executor": "Run",
-    "JUnit.MyResourceTest.testGetIt.executor": "Run",
-    "JUnit.MyResourceTest.testListarProjetos.executor": "Run",
-    "JUnit.MyResourceTest.testListarProjetosPorStatus.executor": "Run",
-    "JUnit.ProjetoBOTest.executor": "Run",
-    "JUnit.ProjetoDAOTest.executor": "Run",
-    "JUnit.ProjetoDAOTest.testListarProjetos.executor": "Run",
-    "JUnit.ProjetoTest.testCalcularEficiênciaEnergetica.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/workspaces/simple-service",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in GlobalSolutionJava.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MyResourceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MyResourceTest.testDeletarProjetosPorTipoFonte.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MyResourceTest.testGetIt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MyResourceTest.testListarProjetos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MyResourceTest.testListarProjetosPorStatus.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjetoBOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjetoDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjetoDAOTest.testListarProjetos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjetoTest.testCalcularEficiênciaEnergetica.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/FIAP/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FIAP\1TDSY\Java\simple-service\target\maven-archiver" />
@@ -161,7 +169,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjetoDAOTest.testListarProjetos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjetoDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GlobalSolutionJava" />
       <extension name="coverage">
         <pattern>
@@ -171,8 +179,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example" />
       <option name="MAIN_CLASS_NAME" value="com.example.ProjetoDAOTest" />
-      <option name="METHOD_NAME" value="testListarProjetos" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ProjetoDAOTest" />
         <item itemvalue="JUnit.MyResourceTest" />
         <item itemvalue="JUnit.MyResourceTest.testDeletarProjetosPorTipoFonte" />
         <item itemvalue="JUnit.MyResourceTest.testListarProjetosPorStatus" />
-        <item itemvalue="JUnit.ProjetoDAOTest.testListarProjetos" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732043898468</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Alterações realizadas em AutomacaoResource.java, alteração para permissão de listas nas resquisições Json">
+      <option name="closed" value="true" />
+      <created>1732045663441</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732045663441</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

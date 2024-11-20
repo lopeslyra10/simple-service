@@ -6,8 +6,8 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Path("/automacao")
@@ -25,7 +25,7 @@ public class AutomacaoResource {
     }
 
     @POST
-    public Response ajustarConsumo(List<Consumo> consumos) {
+    public Response ajustarConsumo(ArrayList<Consumo> consumos) {
         for (Consumo consumo : consumos) {
             automacao.ajustarConsumo(consumo); // Executa a lógica para cada dispositivo
         }

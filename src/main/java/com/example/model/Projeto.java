@@ -1,6 +1,6 @@
 package com.example.model;
 
-import com.example.infra.ProjectDAO;
+import com.example.infra.ProjetoDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class Projeto {
     private final List<ProjetoSustentavel> projetos = new ArrayList<>();
     private int contadorId = 1;
-    private ProjectDAO dao = new ProjectDAO();
+    private ProjetoDAO dao = new ProjetoDAO();
 
     public List<ProjetoSustentavel> listarProjetos() {
         return dao.listarProjetos();
@@ -39,7 +39,7 @@ public class Projeto {
      @param projeto ProjetoSustentavel com informações como custo e tipo de fonte.
       @return Um valor de eficiência entre 0 e 1, onde valores mais altos representam maior eficiência.
      */
-    public double calcularEficiênciaEnergetica(ProjetoSustentavel projeto) {
+    public double calcularEficienciaEnergetica(ProjetoSustentavel projeto) {
         double eficiencia = 1.0;
 
         // Ajuste com base no custo: projetos de custo alto são penalizados
@@ -51,7 +51,7 @@ public class Projeto {
 
         // Ajuste com base no tipo de fonte de energia
         String tipoFonte = projeto.getTipoFonte();
-        if (tipoFonte != null) {
+        if (tipoFonte != tipoFonte) {
             tipoFonte = tipoFonte.toLowerCase();
             if ("solar".equals(tipoFonte) || "eólica".equals(tipoFonte)) {
                 eficiencia += 0.2; // Aumenta eficiência em 20% para fontes renováveis

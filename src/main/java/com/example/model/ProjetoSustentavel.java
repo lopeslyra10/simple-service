@@ -1,22 +1,18 @@
 package com.example.model;
 
-import jakarta.ws.rs.Path;
+import java.io.Serializable;
 
-@Path("/projetos")
 public class ProjetoSustentavel {
-
     private int id;
     private String nome;
     private String descricao;
     private String tipoFonte;
     private String regiao;
-    private double custo;
+    private Double custo;
     private String status;
-    private double emissoesCarbono;
+    private Double emissoesCarbono;
 
-    public ProjetoSustentavel(int id, String nome, String descricao, String tipoFonte, String regiao, double custo, String status,
-                              double emissoesCarbono) {
-        this.id = id;
+    public ProjetoSustentavel(String nome, String descricao, String tipoFonte, String regiao, Double custo, String status, Double emissoesCarbono) {
         this.nome = nome;
         this.descricao = descricao;
         this.tipoFonte = tipoFonte;
@@ -30,6 +26,7 @@ public class ProjetoSustentavel {
 
     }
 
+    // Getters e Setters
     public int getId() {
         return id;
     }
@@ -70,11 +67,11 @@ public class ProjetoSustentavel {
         this.regiao = regiao;
     }
 
-    public double getCusto() {
+    public Double getCusto() {
         return custo;
     }
 
-    public void setCusto(double custo) {
+    public void setCusto(Double custo) {
         this.custo = custo;
     }
 
@@ -86,11 +83,11 @@ public class ProjetoSustentavel {
         this.status = status;
     }
 
-    public double getEmissoesCarbono() {
+    public Double getEmissoesCarbono() {
         return emissoesCarbono;
     }
 
-    public void setEmissoesCarbono(double emissoesCarbono) {
+    public void setEmissoesCarbono(Double emissoesCarbono) {
         this.emissoesCarbono = emissoesCarbono;
     }
 }
