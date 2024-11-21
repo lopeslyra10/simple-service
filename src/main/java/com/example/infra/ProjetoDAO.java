@@ -38,7 +38,7 @@ public class ProjetoDAO {
 
 
     public void inserirProjeto(ProjetoSustentavel projeto) {
-        String sql = "INSERT INTO projetos (nome, descricao, tipoFonte, regiao, custo, status) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO TB_PROJETOS (nome, descricao, tipoFonte, regiao, custo, status) VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, projeto.getNome());
@@ -54,7 +54,7 @@ public class ProjetoDAO {
     }
 
     public void atualizarProjeto(ProjetoSustentavel projeto) {
-        String sql = "UPDATE projetos SET nome = ?, descricao = ?, tipoFonte = ?, regiao = ?, custo = ?, status = ? WHERE id = ?";
+        String sql = "UPDATE TB_PROJETOS SET nome = ?, descricao = ?, tipoFonte = ?, regiao = ?, custo = ?, status = ? WHERE id = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, projeto.getNome());
@@ -71,7 +71,7 @@ public class ProjetoDAO {
     }
 
     public void deletarProjeto(int id) {
-        String sql = "DELETE FROM projetos WHERE id = ?";
+        String sql = "DELETE FROM TB_PROJETOS WHERE id = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
@@ -83,7 +83,7 @@ public class ProjetoDAO {
 
     public List<ProjetoSustentavel> listarProjetosPorStatus(String status) {
         List<ProjetoSustentavel> projetos = new ArrayList<>();
-        String sql = "SELECT * FROM projetos WHERE status = ?";
+        String sql = "SELECT * FROM TB_PROJETOS WHERE status = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, status);
@@ -107,7 +107,7 @@ public class ProjetoDAO {
 
     public List<ProjetoSustentavel> listarProjetosPorTipoFonte(String tipoFonte) {
         List<ProjetoSustentavel> projetos = new ArrayList<>();
-        String sql = "SELECT * FROM projetos WHERE tipoFonte = ?";
+        String sql = "SELECT * FROM TB_PROJETOS WHERE tipoFonte = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, tipoFonte);

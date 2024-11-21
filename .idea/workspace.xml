@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="Alteração realizada na classe ConsumoDAO, realizado o fechamento dos ResultSet">
+    <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/infra/ProjetoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/infra/ProjetoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/ProjetoSustentavel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/ProjetoSustentavel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732194551746</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alterações feitas com base na mudança de noomeclatura das tableas projeto e consumo">
+      <option name="closed" value="true" />
+      <created>1732198625578</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732198625578</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -262,7 +266,8 @@
     <MESSAGE value="Alterações realizadas em AutomacaoResource.java, alteração para permissão de listas nas resquisições Json" />
     <MESSAGE value="Alterações realizadas no projeto para o bom funcionamento da API" />
     <MESSAGE value="Alteração realizada na classe ConsumoDAO, realizado o fechamento dos ResultSet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteração realizada na classe ConsumoDAO, realizado o fechamento dos ResultSet" />
+    <MESSAGE value="Alterações feitas com base na mudança de noomeclatura das tableas projeto e consumo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterações feitas com base na mudança de noomeclatura das tableas projeto e consumo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
