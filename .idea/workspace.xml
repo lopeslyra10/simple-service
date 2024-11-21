@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/infra/ProjetoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/infra/ProjetoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732198625578</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Alterações feitas em ProjetoDAO.java para o bom funcionamento da concexão com o banco de dados">
+      <option name="closed" value="true" />
+      <created>1732200020937</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732200020937</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,7 +276,8 @@
     <MESSAGE value="Alterações realizadas no projeto para o bom funcionamento da API" />
     <MESSAGE value="Alteração realizada na classe ConsumoDAO, realizado o fechamento dos ResultSet" />
     <MESSAGE value="Alterações feitas com base na mudança de noomeclatura das tableas projeto e consumo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterações feitas com base na mudança de noomeclatura das tableas projeto e consumo" />
+    <MESSAGE value="Alterações feitas em ProjetoDAO.java para o bom funcionamento da concexão com o banco de dados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterações feitas em ProjetoDAO.java para o bom funcionamento da concexão com o banco de dados" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

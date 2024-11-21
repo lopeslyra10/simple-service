@@ -14,17 +14,17 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class ProjetoResource {
 
-    private final ProjetoDAO dao = new ProjetoDAO(); // Inicialização do DAO
+    private final ProjetoDAO dao = new ProjetoDAO();
 
     @GET
     public Response listarProjetos() {
-        List<ProjetoSustentavel> projetos = dao.listarProjetos(); // Busca do banco
+        List<ProjetoSustentavel> projetos = dao.listarProjetos();
         return Response.ok(projetos).build();
     }
 
     @POST
     public Response criarProjeto(ProjetoSustentavel projeto) {
-        dao.inserirProjeto(projeto); // Persistir no banco
+        dao.inserirProjeto(projeto);
         return Response.status(Response.Status.CREATED).entity(projeto).build();
     }
 
@@ -32,14 +32,14 @@ public class ProjetoResource {
     @Path("/{id}")
     public Response atualizarProjeto(@PathParam("id") int id, ProjetoSustentavel projeto) {
         projeto.setId(id);
-        dao.atualizarProjeto(projeto); // Atualizar no banco
+        dao.atualizarProjeto(projeto);
         return Response.ok(projeto).build();
     }
 
     @DELETE
     @Path("/{id}")
     public Response deletarProjeto(@PathParam("id") int id) {
-        dao.deletarProjeto(id); // Deletar no banco
+        dao.deletarProjeto(id);
         return Response.noContent().build();
     }
 
