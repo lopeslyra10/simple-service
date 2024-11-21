@@ -30,15 +30,47 @@ public class Projeto {
         throw new IllegalArgumentException("Projeto com ID " + projetoAtualizado.getId() + " não encontrado.");
     }
 
+    public ProjetoSustentavel buscarPorId(int id) {
+        for (ProjetoSustentavel projeto : projetos) {
+            if (projeto.getId() == id) {
+                return projeto;
+            }
+        }
+        return null;
+    }
+
     // Deletar um projeto por ID
     public void deletarProjeto(int id) {
         projetos.removeIf(p -> p.getId() == id);
     }
+
+    // Filtrar projetos por status
+    public List<ProjetoSustentavel> listarPorStatus(String status) {
+        List<ProjetoSustentavel> filtrados = new ArrayList<>();
+        for (ProjetoSustentavel projeto : listarProjetos()) {
+            if (projeto.getStatus() != null && projeto.getStatus().equalsIgnoreCase(status)) {
+                filtrados.add(projeto);
+            }
+        }
+        return filtrados;
+    }
+
+    // Filtrar projetos por tipo de fonte
+    public List<ProjetoSustentavel> listarPorTipoFonte(String tipoFonte) {
+        List<ProjetoSustentavel> filtrados = new ArrayList<>();
+        for (ProjetoSustentavel projeto : listarProjetos()) {
+            if (projeto.getTipoFonte() != null && projeto.getTipoFonte().equalsIgnoreCase(tipoFonte)) {
+                filtrados.add(projeto);
+            }
+        }
+        return filtrados;
+    }
+
     /*
       Calcula a eficiência energética de um projeto.
-     @param projeto ProjetoSustentavel com informações como custo e tipo de fonte.
+      @param projeto ProjetoSustentavel com informações como custo e tipo de fonte.
       @return Um valor de eficiência entre 0 e 1, onde valores mais altos representam maior eficiência.
-     */
+    */
     public double calcularEficienciaEnergetica(ProjetoSustentavel projeto) {
         double eficiencia = 1.0;
 
@@ -51,11 +83,8 @@ public class Projeto {
 
         // Ajuste com base no tipo de fonte de energia
         String tipoFonte = projeto.getTipoFonte();
-        if (tipoFonte != tipoFonte) {
-            tipoFonte = tipoFonte.toLowerCase();
-            if ("solar".equals(tipoFonte) || "eólica".equals(tipoFonte)) {
-                eficiencia += 0.2; // Aumenta eficiência em 20% para fontes renováveis
-            }
+        if (tipoFonte != null && (tipoFonte.equalsIgnoreCase("solar") || tipoFonte.equalsIgnoreCase("eólica"))) {
+            eficiencia += 0.2; // Aumenta eficiência em 20% para fontes renováveis
         }
 
         double emissoesCarbono = projeto.getEmissoesCarbono();

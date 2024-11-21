@@ -12,10 +12,11 @@ public class ProjetoDAO {
 
     public List<ProjetoSustentavel> listarProjetos() {
         List<ProjetoSustentavel> projetos = new ArrayList<>();
-        try (Connection conn = ConnectionFactory.getConnection()) {
-            String sql = "SELECT * FROM projetos";
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            ResultSet rs = stmt.executeQuery();
+        String sql = "SELECT * FROM TB_PROJETOS";
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
                 ProjetoSustentavel projeto = new ProjetoSustentavel();
@@ -26,6 +27,7 @@ public class ProjetoDAO {
                 projeto.setRegiao(rs.getString("regiao"));
                 projeto.setCusto(rs.getDouble("custo"));
                 projeto.setStatus(rs.getString("status"));
+                projeto.setEmissoesCarbono(rs.getDouble("emissoesCarbono"));
                 projetos.add(projeto);
             }
         } catch (SQLException e) {
@@ -33,6 +35,7 @@ public class ProjetoDAO {
         }
         return projetos;
     }
+
 
     public void inserirProjeto(ProjetoSustentavel projeto) {
         String sql = "INSERT INTO projetos (nome, descricao, tipoFonte, regiao, custo, status) VALUES (?, ?, ?, ?, ?, ?)";
@@ -76,5 +79,53 @@ public class ProjetoDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<ProjetoSustentavel> listarProjetosPorStatus(String status) {
+        List<ProjetoSustentavel> projetos = new ArrayList<>();
+        String sql = "SELECT * FROM projetos WHERE status = ?";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, status);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                ProjetoSustentavel projeto = new ProjetoSustentavel();
+                projeto.setId(rs.getInt("id"));
+                projeto.setNome(rs.getString("nome"));
+                projeto.setDescricao(rs.getString("descricao"));
+                projeto.setTipoFonte(rs.getString("tipoFonte"));
+                projeto.setRegiao(rs.getString("regiao"));
+                projeto.setCusto(rs.getDouble("custo"));
+                projeto.setStatus(rs.getString("status"));
+                projetos.add(projeto);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return projetos;
+    }
+
+    public List<ProjetoSustentavel> listarProjetosPorTipoFonte(String tipoFonte) {
+        List<ProjetoSustentavel> projetos = new ArrayList<>();
+        String sql = "SELECT * FROM projetos WHERE tipoFonte = ?";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, tipoFonte);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                ProjetoSustentavel projeto = new ProjetoSustentavel();
+                projeto.setId(rs.getInt("id"));
+                projeto.setNome(rs.getString("nome"));
+                projeto.setDescricao(rs.getString("descricao"));
+                projeto.setTipoFonte(rs.getString("tipoFonte"));
+                projeto.setRegiao(rs.getString("regiao"));
+                projeto.setCusto(rs.getDouble("custo"));
+                projeto.setStatus(rs.getString("status"));
+                projetos.add(projeto);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return projetos;
     }
 }

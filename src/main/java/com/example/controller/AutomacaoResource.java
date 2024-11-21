@@ -17,7 +17,7 @@ public class AutomacaoResource {
     private final Automacao automacao = new Automacao();
 
     // Simulando dispositivos para testar
-    private static Map<Integer, Consumo> dispositivos = new HashMap<>();
+    private static final Map<Integer, Consumo> dispositivos = new HashMap<>();
 
     static {
         dispositivos.put(1, new Consumo(1, "Ar-condicionado", 22, null));
@@ -31,7 +31,6 @@ public class AutomacaoResource {
         }
         return Response.ok("Dispositivos ajustados com sucesso").build();
     }
-
 
     @GET
     public Response listarDispositivos() {

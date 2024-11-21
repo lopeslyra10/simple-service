@@ -1,7 +1,5 @@
 package com.example.model;
 
-import java.io.Serializable;
-
 public class ProjetoSustentavel {
     private int id;
     private String nome;
