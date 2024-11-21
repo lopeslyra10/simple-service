@@ -36,18 +36,53 @@ public class ProjetoDAO {
         return projetos;
     }
 
-
-    public void inserirProjeto(ProjetoSustentavel projeto) {
-        String sql = "INSERT INTO TB_PROJETOS (nome, descricao, tipoFonte, regiao, custo, status) VALUES (?, ?, ?, ?, ?, ?)";
+    public ProjetoSustentavel listarProjetoPorId(int id) {
+        String sql = "SELECT * FROM TB_PROJETOS WHERE id = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                ProjetoSustentavel projeto = new ProjetoSustentavel();
+                projeto.setId(rs.getInt("id"));
+                projeto.setNome(rs.getString("nome"));
+                projeto.setDescricao(rs.getString("descricao"));
+                projeto.setTipoFonte(rs.getString("tipoFonte"));
+                projeto.setRegiao(rs.getString("regiao"));
+                projeto.setCusto(rs.getDouble("custo"));
+                projeto.setStatus(rs.getString("status"));
+                projeto.setEmissoesCarbono(rs.getDouble("emissoesCarbono"));
+                return projeto;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public void inserirProjeto(ProjetoSustentavel projeto) {
+        String sql = "INSERT INTO TB_PROJETOS (nome, descricao, tipoFonte, regiao, custo, status, emissoesCarbono) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String generatedColumns[] = {"id"}; // Especifica a coluna de ID gerada
+
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql, generatedColumns)) {
             stmt.setString(1, projeto.getNome());
             stmt.setString(2, projeto.getDescricao());
             stmt.setString(3, projeto.getTipoFonte());
             stmt.setString(4, projeto.getRegiao());
             stmt.setDouble(5, projeto.getCusto());
             stmt.setString(6, projeto.getStatus());
+            stmt.setDouble(7, projeto.getEmissoesCarbono());
             stmt.executeUpdate();
+
+            // Recupera o ID gerado automaticamente
+            try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    projeto.setId(generatedKeys.getInt(1)); // Atribui o ID gerado ao objeto
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

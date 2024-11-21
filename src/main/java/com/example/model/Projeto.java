@@ -31,13 +31,9 @@ public class Projeto {
     }
 
     public ProjetoSustentavel buscarPorId(int id) {
-        for (ProjetoSustentavel projeto : projetos) {
-            if (projeto.getId() == id) {
-                return projeto;
-            }
-        }
-        return null;
+        return dao.listarProjetoPorId(id);
     }
+
 
     // Deletar um projeto por ID
     public void deletarProjeto(int id) {
