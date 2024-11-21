@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.model.Projeto;
 import com.example.model.ProjetoSustentavel;
 import com.example.infra.ProjetoDAO;
 
@@ -14,7 +15,8 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class ProjetoResource {
 
-    private final ProjetoDAO dao = new ProjetoDAO();
+    private final ProjetoDAO dao = new ProjetoDAO(); // Inicializando o DAO
+    private final Projeto projeto = new Projeto(); // Inicializando o objeto Projeto
 
     @GET
     public Response listarProjetos() {
@@ -41,6 +43,21 @@ public class ProjetoResource {
     public Response deletarProjeto(@PathParam("id") int id) {
         dao.deletarProjeto(id);
         return Response.noContent().build();
+    }
+
+    @GET
+    @Path("/{id}")
+    public Response buscarProjetoPorId(@PathParam("id") int id) {
+        ProjetoSustentavel projetoSustentavel = dao.listarProjetos().stream()
+                .filter(p -> p.getId() == id)
+                .findFirst()
+                .orElse(null);
+        if (projetoSustentavel == null) {
+            return Response.status(Response.Status.NOT_FOUND)
+                    .entity("Projeto com ID " + id + " não encontrado.")
+                    .build();
+        }
+        return Response.ok(projetoSustentavel).build();
     }
 
     @GET
