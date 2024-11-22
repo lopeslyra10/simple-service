@@ -12,6 +12,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+//Classe que será utilizada para a Api de Front
 @Path("/api")
 public class AutomacaoResource {
 

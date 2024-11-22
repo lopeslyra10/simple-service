@@ -3,7 +3,6 @@ package com.example.controller;
 import com.example.model.Projeto;
 import com.example.model.ProjetoSustentavel;
 import com.example.infra.ProjetoDAO;
-
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -15,8 +14,7 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class ProjetoResource {
 
-    private final ProjetoDAO dao = new ProjetoDAO(); // Inicializando o DAO
-    private final Projeto projeto = new Projeto(); // Inicializando o objeto Projeto
+    private final ProjetoDAO dao = new ProjetoDAO();
 
     @GET
     public Response listarProjetos() {
@@ -30,12 +28,26 @@ public class ProjetoResource {
         return Response.status(Response.Status.CREATED).entity(projeto).build();
     }
 
+    @GET
+    @Path("/{id}")
+    public Response buscarProjetoPorId(@PathParam("id") int id) {
+        ProjetoSustentavel projeto = dao.listarProjetos()
+                .stream()
+                .filter(p -> p.getId() == id)
+                .findFirst()
+                .orElse(null);
+        if (projeto == null) {
+            return Response.status(Response.Status.NOT_FOUND).entity("Projeto não encontrado.").build();
+        }
+        return Response.ok(projeto).build();
+    }
+
     @PUT
     @Path("/{id}")
-    public Response atualizarProjeto(@PathParam("id") int id, ProjetoSustentavel projeto) {
-        projeto.setId(id);
-        dao.atualizarProjeto(projeto);
-        return Response.ok(projeto).build();
+    public Response atualizarProjeto(@PathParam("id") int id, ProjetoSustentavel projetoAtualizado) {
+        projetoAtualizado.setId(id);
+        dao.atualizarProjeto(projetoAtualizado);
+        return Response.ok(projetoAtualizado).build();
     }
 
     @DELETE
@@ -46,31 +58,16 @@ public class ProjetoResource {
     }
 
     @GET
-    @Path("/{id}")
-    public Response buscarProjetoPorId(@PathParam("id") int id) {
-        ProjetoSustentavel projetoSustentavel = dao.listarProjetos().stream()
-                .filter(p -> p.getId() == id)
-                .findFirst()
-                .orElse(null);
-        if (projetoSustentavel == null) {
-            return Response.status(Response.Status.NOT_FOUND)
-                    .entity("Projeto com ID " + id + " não encontrado.")
-                    .build();
-        }
-        return Response.ok(projetoSustentavel).build();
-    }
-
-    @GET
     @Path("/status/{status}")
-    public Response listarProjetosPorStatus(@PathParam("status") String status) {
-        List<ProjetoSustentavel> filtrados = dao.listarProjetosPorStatus(status);
-        return Response.ok(filtrados).build();
+    public Response listarPorStatus(@PathParam("status") String status) {
+        List<ProjetoSustentavel> projetos = dao.listarProjetosPorStatus(status);
+        return Response.ok(projetos).build();
     }
 
     @GET
     @Path("/tipoFonte/{tipoFonte}")
-    public Response listarProjetosPorTipoFonte(@PathParam("tipoFonte") String tipoFonte) {
-        List<ProjetoSustentavel> filtrados = dao.listarProjetosPorTipoFonte(tipoFonte);
-        return Response.ok(filtrados).build();
+    public Response listarPorTipoFonte(@PathParam("tipoFonte") String tipoFonte) {
+        List<ProjetoSustentavel> projetos = dao.listarProjetosPorTipoFonte(tipoFonte);
+        return Response.ok(projetos).build();
     }
 }
