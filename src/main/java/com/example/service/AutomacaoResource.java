@@ -13,11 +13,11 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 @Path("/api")
-public class AutomacaoController {
+public class AutomacaoResource {
 
     private final Automacao automacao;
 
-    public AutomacaoController() {
+    public AutomacaoResource() {
         this.automacao = new Automacao();
     }
     @POST

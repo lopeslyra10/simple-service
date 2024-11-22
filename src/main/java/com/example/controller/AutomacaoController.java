@@ -13,7 +13,7 @@ import java.util.Map;
 @Path("/automacao")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class AutomacaoResource {
+public class AutomacaoController {
     private final Automacao automacao = new Automacao();
 
     // Simulando dispositivos para testar
