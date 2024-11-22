@@ -40,7 +40,5 @@ public class Main {
         projeto.setTipoFonte("Solar");
         projeto.setEmissoesCarbono(800.00);
 
-        double eficiencia = projetoBO.calcularEficienciaEnergetica(projeto);
-        System.out.println("Eficiência energética: " + eficiencia);
     }
 }
