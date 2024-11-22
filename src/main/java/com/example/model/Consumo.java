@@ -14,37 +14,22 @@ public class Consumo {
         this.nivelConsumo = nivelConsumo;
         this.horario = horario;
     }
+
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getTipoDispositivo() {
         return tipoDispositivo;
     }
 
-    public void setTipoDispositivo(String tipoDispositivo) {
-        this.tipoDispositivo = tipoDispositivo;
-    }
-
     public double getNivelConsumo() {
         return nivelConsumo;
     }
 
-    public void setNivelConsumo(double nivelConsumo) {
-        this.nivelConsumo = nivelConsumo;
-    }
 
     public LocalDateTime getHorario() {
         return horario;
     }
-
-    public void setHorario(LocalDateTime horario) {
-        this.horario = horario;
-    }
-
 }
 
