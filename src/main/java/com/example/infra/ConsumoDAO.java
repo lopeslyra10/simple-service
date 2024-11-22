@@ -8,9 +8,13 @@ import java.util.List;
 
 public class ConsumoDAO {
 
+    public ConsumoDAO() {
+
+    }
+
     public List<Consumo> listarConsumos() {
         List<Consumo> consumos = new ArrayList<>();
-        String sql = "SELECT * FROM consumos";
+        String sql = "SELECT * FROM TB_CONSUMO";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
@@ -31,7 +35,7 @@ public class ConsumoDAO {
     }
 
     public void inserirConsumo(Consumo consumo) {
-        String sql = "INSERT INTO consumos (tipoDispositivo, nivelConsumo, horario) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO TB_CONSUMO (tipoDispositivo, nivelConsumo, horario) VALUES (?, ?, ?)";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -45,7 +49,7 @@ public class ConsumoDAO {
     }
 
     public void atualizarConsumo(Consumo consumo) {
-        String sql = "UPDATE consumos SET tipoDispositivo = ?, nivelConsumo = ?, horario = ? WHERE id = ?";
+        String sql = "UPDATE TB_CONSUMO SET tipoDispositivo = ?, nivelConsumo = ?, horario = ? WHERE id = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
@@ -60,7 +64,7 @@ public class ConsumoDAO {
     }
 
     public void deletarConsumo(int id) {
-        String sql = "DELETE FROM consumos WHERE id = ?";
+        String sql = "DELETE FROM TB_CONSUMO WHERE id = ?";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 

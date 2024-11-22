@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="Nomeclaturas alteradas por questão de organização">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/CorsFilter.java" afterDir="false" />
+    <list default="true" id="a67958ce-f85d-4bf7-a0ed-ee39c5142942" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/AutomacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ProjetoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/AutomacaoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/AutomacaoResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/infra/ConsumoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/infra/ConsumoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Projeto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +44,6 @@
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;lopeslyra10&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
@@ -100,6 +95,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FIAP\1TDSY\Java\simple-service\target\maven-archiver" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.model" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -301,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732255351498</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cors adicionado ao projeto">
+      <option name="closed" value="true" />
+      <created>1732256549810</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732256549810</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -316,7 +322,8 @@
     <MESSAGE value="Alterações na classe Projeto.java e AutomacaoController.java realizadas para o consumo da API de Front" />
     <MESSAGE value="Camada Automacao movida apra service por conta da api de front" />
     <MESSAGE value="Nomeclaturas alteradas por questão de organização" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nomeclaturas alteradas por questão de organização" />
+    <MESSAGE value="Cors adicionado ao projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cors adicionado ao projeto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

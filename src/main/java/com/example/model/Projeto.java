@@ -67,13 +67,13 @@ public class Projeto {
             eficiencia += 0.1; // Beneficia projetos de baixo custo
         }
 
-        // Ajuste com base no tipo de fonte de energia
+
         String tipoFonte = projeto.getTipoFonte();
         if (tipoFonte != null && ("solar".equalsIgnoreCase(tipoFonte) || "eólica".equalsIgnoreCase(tipoFonte))) {
             eficiencia += 0.2; // Beneficia fontes renováveis
         }
 
-        // Ajuste com base nas emissões de carbono
+
         double emissoesCarbono = projeto.getEmissoesCarbono();
         if (emissoesCarbono < 1000) {
             eficiencia += 0.1; // Beneficia projetos com baixas emissões

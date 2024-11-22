@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.example.model.Projeto;
 import com.example.model.ProjetoSustentavel;
 import com.example.infra.ProjetoDAO;
 import jakarta.ws.rs.*;
@@ -12,7 +11,7 @@ import java.util.List;
 @Path("/projetos")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ProjetoResource {
+public class ProjetoController {
 
     private final ProjetoDAO dao = new ProjetoDAO();
 
